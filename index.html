@@ -1,37 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
- <script async src="https://tally.so/widgets/embed.js"></script>
- <script>
- window.TallyConfig = {
-   "formId": "mV1Kyv",
-   "popup": {
-     "emoji": {
-       "text": "👋",
-       "animation": "wave"
-     }
-   }
- };
- </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alicia & Zack's Wedding</title>
 
- <style>
-   .full-screen {
-       width: 100vw;
-       height: 100vh;
-       margin: 0;
-       padding: 0;
-       max-width: 100vw;
-       max-height: 100vh;
-       overflow: hidden;
-       display: block;
-   }
- </style>
+    <!-- Tally Pop-up Script -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script>
+    window.TallyConfig = {
+      "formId": "mV1Kyv",
+      "popup": {
+        "emoji": {
+          "text": "👋",
+          "animation": "wave"
+        }
+      }
+    };
+    </script>
+
+    <!-- Additional Style for Full Screen Width -->
+    <style>
+        /* Make iframe full width and height with scroll enabled */
+        .full-screen {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            max-width: 100vw;
+            max-height: 100vh;
+            overflow: auto;
+            display: block;
+        }
+    </style>
 </head>
 
 <body style="margin: 0; padding: 0; width: 100vw; height: 100vh; background-color: #fff;">
-<div class="full-screen">
-   <iframe loading="lazy" class="full-screen"
-       src="https://www.canva.com/design/DAF8ZDP4HT0/6tVlHwIZ0z_dlcZUITrEPg/view?embed" 
-       allowfullscreen="allowfullscreen" allow="fullscreen">
-   </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF8ZDP4HT0&#x2F;6tVlHwIZ0z_dlcZUITrEPg&#x2F;view?utm_content=DAF8ZDP4HT0&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Alicia &amp; Zack</a> by Alicia MacDougall
+
+    <!-- Embedded Canva Design with Scroll -->
+    <div class="full-screen">
+        <iframe src="https://www.canva.com/design/DAF8ZDP4HT0/hhnv-3umxIpMDjf_p23s1A/view?embed"
+                class="full-screen"
+                scrolling="yes"
+                style="border: none;">
+        </iframe>
+    </div>
+
+    <!-- Link Back to Canva (Optional) -->
+    <a href="https://www.canva.com/design/DAF8ZDP4HT0/hhnv-3umxIpMDjf_p23s1A/view?utm_content=DAF8ZDP4HT0&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">
+        Alicia & Zack by Alicia MacDougall
+    </a>
+    
 </body>
+</html>
