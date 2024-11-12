@@ -21,28 +21,40 @@
 
     <!-- Additional Style for Full Screen Width -->
     <style>
-        /* Make iframe full width and height with scroll enabled */
+        /* Full screen and scrolling style adjustments */
+        body, html {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+        }
+
         .full-screen {
             width: 100vw;
             height: 100vh;
             margin: 0;
             padding: 0;
-            max-width: 100vw;
-            max-height: 100vh;
-            overflow: auto;
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 
-<body style="margin: 0; padding: 0; width: 100vw; height: 100vh; background-color: #fff;">
+<body>
 
     <!-- Embedded Canva Design with Scroll -->
     <div class="full-screen">
-        <iframe src="https://www.canva.com/design/DAF8ZDP4HT0/hhnv-3umxIpMDjf_p23s1A/view?embed"
-                class="full-screen"
-                scrolling="yes"
-                style="border: none;">
+        <iframe src="https://www.canva.com/design/DAF8ZDP4HT0/hhnv-3umxIpMDjf_p23s1A/view?embed" 
+                scrolling="yes" 
+                allowfullscreen="true">
         </iframe>
     </div>
 
