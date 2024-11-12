@@ -19,31 +19,34 @@
     };
     </script>
 
-    <!-- Additional Style for Full Screen Width -->
+    <!-- Additional Style for Full Screen Width and Scrolling -->
     <style>
-        /* Full screen and scrolling style adjustments */
-        body, html {
+        /* Force scrolling on the entire page and iframe */
+        html, body {
             width: 100vw;
             height: 100vh;
             margin: 0;
             padding: 0;
-            overflow-y: scroll;
+            overflow-y: scroll; /* Enable vertical scrolling */
+            overflow-x: hidden; /* Prevent horizontal overflow */
         }
 
         .full-screen {
             width: 100vw;
             height: 100vh;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
 
         iframe {
             width: 100%;
             height: 100%;
             border: none;
+            overflow: auto; /* Add scrolling within the iframe */
         }
     </style>
 </head>
@@ -52,9 +55,9 @@
 
     <!-- Embedded Canva Design with Smart Embed Link -->
     <div class="full-screen">
-        <iframe src="https://www.canva.com/design/DAF8ZDP4HT0/6tVlHwIZ0z_dlcZUITrEPg/view?embed" 
-                allowfullscreen="true" 
-                style="border: none;">
+        <iframe src="https://www.canva.com/design/DAF8ZDP4HT0/6tVlHwIZ0z_dlcZUITrEPg/view?embed"
+                allowfullscreen="true"
+                scrolling="yes">
         </iframe>
     </div>
     
