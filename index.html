@@ -1,65 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alicia & Zack's Wedding</title>
-
-    <!-- Tally Pop-up Script -->
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script async src="https://tally.so/widgets/embed.js"></script>
     <script>
-    window.TallyConfig = {
-      "formId": "mV1Kyv",
-      "popup": {
-        "emoji": {
-          "text": "👋",
-          "animation": "wave"
-        }
-      }
-    };
+      window.TallyConfig = {
+        formId: "mV1Kyv",
+        popup: {
+          width: 300,
+          emoji: {
+            text: "👋",
+            animation: "wave",
+          },
+          open: {
+            trigger: "scroll",
+            scrollPercent: 5,
+          },
+          autoClose: 0,
+          doNotShowAfterSubmit: true,
+        },
+      };
     </script>
-
-    <!-- Additional Style for Full Screen Width and Scrolling -->
-    <style>
-        /* Force scrolling on the entire page and iframe */
-        html, body {
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            overflow-y: scroll; /* Enable vertical scrolling */
-            overflow-x: hidden; /* Prevent horizontal overflow */
-        }
-
-        .full-screen {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            overflow: auto; /* Add scrolling within the iframe */
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Embedded Canva Design with Smart Embed Link -->
-    <div class="full-screen">
-        <iframe src="https://www.canva.com/design/DAF8ZDP4HT0/6tVlHwIZ0z_dlcZUITrEPg/view?embed"
-                allowfullscreen="true"
-                scrolling="yes">
-        </iframe>
+    <title>Alicia & Zack Wedding 2025</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="left">
+        <h1>Alicia + Zack</h1>
+        <h2>October 11th, 2025</h2>
+        <hr />
+        <div class="subtitle">
+          Join us in celebrating our Happily Ever After
+        </div>
+      </div>
+      <div class="right">
+        <img class="frame" src="/images/frame.png" alt="Alicia and Zack" />
+      </div>
     </div>
-    
-</body>
+    <div class="body">
+      <img class="book" src="/images/book.png" alt="" />
+      <div class="wedding-details">
+        <div class="page">
+          <h3>Wedding Details</h3>
+          <hr />
+          <a
+            class="anaktoria"
+            target="_blank"
+            href="https://maps.app.goo.gl/FDoiexQQhwqBRv7G6"
+          >
+            Tiffin Centre for Conservation 8195 8th Line, Utopia, ON
+            <img src="/images/map.png" alt="" />
+          </a>
+          <div class="frills">
+            3:00 pm Ceremony<br />
+            3:30 pm Cocktail Hour<br />
+            4:30 pm Dinner Reception<br />
+            7:00 pm Dancing
+          </div>
+        </div>
+        <div class="page">
+          <hr />
+          <h4>Dress Code</h4>
+          <div class="typewriter">
+            Formal attire, keeping in mind that October weather can be
+            unpredictable. We’ll have patio heaters, blankets, and hand warmers
+            available, but please bring jackets or anything you need to stay
+            warm until we move inside at 7 pm. You’ll have space to store any
+            warmer clothing inside so you don’t have to carry it during the
+            ceremony.
+          </div>
+          <h4>Accommodations</h4>
+          <div class="typewriter">
+            We are still working out the details for a hotel block.
+          </div>
+          <h4>Parking and transportation</h4>
+          <div class="typewriter">
+            Overnight parking is available onsite. Uber and taxis also serve the
+            area, which is about 15 minutes from Barrie.
+          </div>
+          <h4>Kids</h4>
+          <div class="typewriter">
+            While we love your little ones, we kindly request our wedding be an
+            adults-only occasion.
+          </div>
+          <h4>Registry</h4>
+          <div class="typewriter">
+            Your presence is our greatest gift! If you’d like to contribute, a
+            monetary gift would be preferred as we start our life together.
+          </div>
+          <hr class="mt-auto" />
+        </div>
+      </div>
+    </div>
+    <div class="contact">
+      More information coming soon. For questions, please contact Zack at
+      647-300-3837
+    </div>
+    <div id="countdown">
+      Happily Ever After
+      <div>
+        <span id="days"></span>
+        <div>days</div>
+      </div>
+      <div>
+        <span id="hours"></span>
+        <div>hours</div>
+      </div>
+      <div>
+        <span id="minutes"></span>
+        <div>minutes</div>
+      </div>
+      <div>
+        <span id="seconds"></span>
+        <div>seconds</div>
+      </div>
+    </div>
+  </body>
+  <script src="/timer.js"></script>
 </html>

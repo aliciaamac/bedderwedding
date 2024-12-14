@@ -1,0 +1,304 @@
+@font-face {
+  font-family: "Aniyah";
+  src: url("/fonts/Aniyah.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Anaktoria";
+  src: url("/fonts/Anaktoria.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Enchanted";
+  src: url("/fonts/Enchanted.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Typewriter";
+  src: url("/fonts/Typewriter.otf") format("opentype");
+}
+
+:root {
+  --gold-100: #f5d680;
+  --gold-200: #f3cf6b;
+  --gold-300: #f1c855;
+  --gold-400: #f0c140;
+  --gold-500: #eeba2b;
+  --gold-600: #d6a727;
+  --gold-700: #be9522;
+  --gold-800: #a7821e;
+  --gold-900: #8f701a;
+}
+
+h1 {
+  font-family: "Aniyah";
+  font-size: 3.5rem;
+  line-height: 6rem;
+  margin: 0;
+}
+
+h2 {
+  margin-top: 0rem;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  color: var(--gold-300);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--gold-600);
+}
+
+hr {
+  border: none;
+  aspect-ratio: 8;
+  width: 100%;
+  margin: 0;
+  background-image: url("/images/hr.png");
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  background-position: center;
+}
+
+body {
+  font-family: "Anaktoria";
+  color: var(--gold-500);
+  background: black;
+  background: url('/images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-weight: 300;
+}
+
+.header {
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+
+  hr {
+    width: 70%;
+    opacity: 70%;
+  }
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.frame {
+  animation: wiggle 10s infinite;
+}
+
+.anaktoria {
+  font-family: "Anaktoria";
+}
+
+.typewriter {
+  font-family: "Typewriter";
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  margin-top: 4rem;
+
+  .book {
+    width: 85%;
+  }
+
+  .wedding-details {
+    --text-color: rgba(0, 0, 0, 70%);
+    position: absolute;
+    top: 1vw;
+    left: 16.25vw;
+    width: 63vw;
+    height: 58vw;
+    display: flex;
+    color: var(--text-color);
+    gap: 1vw;
+
+    .page {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 1.5vw;
+      font-size: 1.4vw;
+
+      &:first-of-type {
+        text-align: center;
+        align-items: center;
+      }
+
+      a,
+      a:visited {
+        color: var(--text-color);
+        font-size: 1.6vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 70%;
+          margin: 3rem 0;
+        }
+      }
+
+      .typewriter {
+        font-size: 1.1vw;
+      }
+
+      hr {
+        align-self: center;
+        width: 70%;
+        flex-shrink: 0;
+      }
+
+      h3 {
+        font-family: "Enchanted";
+        font-size: 5vw;
+        margin: 0;
+      }
+
+      h4 {
+        font-family: "Enchanted";
+        font-size: 2.2vw;
+        margin-top: 1.1vw;
+        margin-bottom: 0.2vw;
+      }
+
+      .frills {
+        background-image: url("images/frills.png");
+        padding: 5vw;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.contact {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+#countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  color: var(--gold-800);
+
+  > div {
+    color: var(--gold-400);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &:first-of-type {
+      margin-left: 1rem;
+    }
+
+    > div {
+      font-size: 1rem;
+    }
+
+    > span {
+      font-family: "Typewriter";
+    }
+  }
+}
+
+
+@media (max-width: 940px) {
+  .header {
+    flex-direction: column;
+  }
+
+  #countdown {
+    flex-wrap: wrap;
+  }
+
+  .body {
+    .book {
+      display: none;
+    }
+  
+    .wedding-details {
+      --text-color: var(--gold-500);
+      position: static;
+      flex-direction: column;
+      height: unset;
+      width: 100%;
+
+      .page {
+        padding: 1rem;
+        font-size: 2rem;
+
+        h3 {
+          font-size: 5rem;
+        }
+  
+        h4 {
+          font-size: 2.2rem;
+          margin-top: 1rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .typewriter {
+          font-size: 1rem;
+          color: var(--gold-100);
+        }
+
+        a {
+          font-size: 1.5rem;
+
+          img {
+            display: none;
+          }
+        }
+
+        .frills {
+          font-size: 1.5rem;
+          padding: 5.5rem;
+        }
+      }
+    }
+  }
+}
