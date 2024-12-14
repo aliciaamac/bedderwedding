@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Aniyah";
-  src: url("/fonts/Aniyah.otf") format("opentype");
+  src: url("/Aniyah.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Anaktoria";
-  src: url("/fonts/Anaktoria.ttf") format("truetype");
+  src: url("/Anaktoria.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Enchanted";
-  src: url("/fonts/Enchanted.otf") format("opentype");
+  src: url("/Enchanted.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Typewriter";
-  src: url("/fonts/Typewriter.otf") format("opentype");
+  src: url("/Typewriter.otf") format("opentype");
 }
 
 :root {
@@ -54,7 +54,7 @@ hr {
   aspect-ratio: 8;
   width: 100%;
   margin: 0;
-  background-image: url("/images/hr.png");
+  background-image: url("/hr.png");
   background-repeat: no-repeat;
   background-size: 100% 60%;
   background-position: center;
@@ -64,7 +64,7 @@ body {
   font-family: "Anaktoria";
   color: var(--gold-500);
   background: black;
-  background: url('/images/background.jpg');
+  background: url('/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -196,7 +196,7 @@ body {
       }
 
       .frills {
-        background-image: url("images/frills.png");
+        background-image: url("frills.png");
         padding: 5vw;
         background-position: center;
         background-size: contain;
